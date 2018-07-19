@@ -1,0 +1,7 @@
+name: Commerce Demo with JSON API
+decscription: Adds JSON API support on top of the demo
+core: 8.x
+type: module
+dependencies:
+  - commerce_demo:commerce_demo
+  - jsonapi:jsonapi
