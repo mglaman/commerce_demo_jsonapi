@@ -1,0 +1,14 @@
+{
+  "name": "drupal/commerce_demo_jsonapi",
+  "type": "drupal-module",
+  "description": "Demo",
+  "keywords": ["Drupal", "Commerce"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/mglaman/commerce_demo_jsonapi",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/commerce": "^2.0",
+    "drupal/jsonapi": "^1.0"
+  }
+}
+
