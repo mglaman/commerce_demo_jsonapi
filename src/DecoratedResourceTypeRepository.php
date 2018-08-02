@@ -36,6 +36,10 @@ class DecoratedResourceTypeRepository extends ResourceTypeRepository {
       if (!in_array($item->getEntityTypeId(), $allowed)) {
         unset($all[$key]);
       }
+      // @todo The new `complex` variation type explodes JSON API.
+      if ($item->getBundle() == 'complex') {
+        unset($all[$key]);
+      }
     }
 
     return $all;
