@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function commerce_demo_jsonapi_entity_type_build(array &$entity_types) {
+    /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+    $allowed = [
+        'commerce_currency',
+        'commerce_store',
+        'commerce_product',
+        'commerce_product_type',
+        'commerce_product_variation',
+        'commerce_product_variation_type',
+        'commerce_product_attribute_value',
+        'commerce_product_attribute',
+        'taxonomy_term',
+        'taxonomy_vocabulary',
+        'node',
+        'node_type',
+        'user',
+        'file',
+        'menu_link_content',
+      ];
+    foreach ($entity_types as $entity_type_id => $entity_type) {
+      if (!in_array($entity_type_id, $allowed)) {
+        $entity_types[$entity_type_id]->set('internal', TRUE);
+      }
+    }
+  }

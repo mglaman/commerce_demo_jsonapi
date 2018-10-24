@@ -4,10 +4,3 @@ services:
     arguments: []
     tags:
       - { name: event_subscriber }
-
-  commerce_demo_jsonapi.decorated_resource_type_repository:
-    class: Drupal\commerce_demo_jsonapi\DecoratedResourceTypeRepository
-    public: false
-    decorates: jsonapi.resource_type.repository
-    parent: jsonapi.resource_type.repository
-    decoration_priority: 10

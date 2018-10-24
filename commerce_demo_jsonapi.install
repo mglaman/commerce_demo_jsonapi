@@ -3,6 +3,5 @@
 use Drupal\Core\Session\AccountInterface;
 
 function commerce_demo_jsonapi_install() {
-  user_role_grant_permissions(AccountInterface::ANONYMOUS_ROLE, ['access jsonapi resource list']);
-  user_role_grant_permissions(AccountInterface::AUTHENTICATED_ROLE, ['access jsonapi resource list']);
+  // No longer needed as JSON API permission removed.
 }
