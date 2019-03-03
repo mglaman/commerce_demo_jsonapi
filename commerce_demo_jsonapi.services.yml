@@ -1,0 +1,6 @@
+services:
+  commerce_demo_jsonapi.filter_variations_subscriber:
+    class: Drupal\commerce_demo_jsonapi\EventSubscriber\FilterVariationsSubscriber
+    arguments: ['@request_stack']
+    tags:
+      - {name: event_subscriber}
