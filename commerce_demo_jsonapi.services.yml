@@ -4,3 +4,25 @@ services:
     arguments: ['@request_stack']
     tags:
       - {name: event_subscriber}
+
+  commerce_demo_jsonapi.route_subscriber:
+    class: Drupal\commerce_demo_jsonapi\Routing\RouteSubscriber
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: event_subscriber }
+
+  # Controller.
+  commerce_demo_jsonapi.entity_resource:
+    class: Drupal\commerce_demo_jsonapi\Controller\ProductResource
+    arguments:
+      - '@entity_type.manager'
+      - '@entity_field.manager'
+      - '@jsonapi.link_manager'
+      - '@jsonapi.resource_type.repository'
+      - '@renderer'
+      - '@entity.repository'
+      - '@jsonapi.include_resolver'
+      - '@jsonapi.entity_access_checker'
+      - '@jsonapi.field_resolver'
+      - '@jsonapi.serializer'
+      - '@event_dispatcher'

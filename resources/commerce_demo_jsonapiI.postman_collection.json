@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "3b042df5-0e31-4843-a6b3-c3b0ee0dd13e",
+		"name": "Commerce Demo JSON API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JSONAPI Entrypoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://commerce2x-api.ddev.local/jsonapi",
+					"protocol": "http",
+					"host": [
+						"commerce2x-api",
+						"ddev",
+						"local"
+					],
+					"path": [
+						"jsonapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Variations for Drupal Commerce Hoodie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://commerce2x-api.ddev.local/jsonapi/commerce_product/clothing/802dfe56-8536-4287-a0fa-6bed3fd3a621/variations",
+					"protocol": "http",
+					"host": [
+						"commerce2x-api",
+						"ddev",
+						"local"
+					],
+					"path": [
+						"jsonapi",
+						"commerce_product",
+						"clothing",
+						"802dfe56-8536-4287-a0fa-6bed3fd3a621",
+						"variations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Variations with \"BLU\" in SKU",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Commerce-Filter-Variations",
+						"value": "BLU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://commerce2x-api.ddev.local/jsonapi/commerce_product/clothing/802dfe56-8536-4287-a0fa-6bed3fd3a621/variations",
+					"protocol": "http",
+					"host": [
+						"commerce2x-api",
+						"ddev",
+						"local"
+					],
+					"path": [
+						"jsonapi",
+						"commerce_product",
+						"clothing",
+						"802dfe56-8536-4287-a0fa-6bed3fd3a621",
+						"variations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
