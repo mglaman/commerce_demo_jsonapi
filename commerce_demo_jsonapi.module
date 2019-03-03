@@ -11,18 +11,11 @@ function commerce_demo_jsonapi_entity_type_build(array &$entity_types) {
         'commerce_currency',
         'commerce_store',
         'commerce_product',
-        'commerce_product_type',
         'commerce_product_variation',
-        'commerce_product_variation_type',
         'commerce_product_attribute_value',
-        'commerce_product_attribute',
         'taxonomy_term',
-        'taxonomy_vocabulary',
         'node',
-        'node_type',
-        'user',
         'file',
-        'menu_link_content',
       ];
     array_walk($entity_types, function (EntityTypeInterface $entity_type) use ($allowed) {
       $entity_type->set('internal', !in_array($entity_type->id(), $allowed, TRUE));
