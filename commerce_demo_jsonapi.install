@@ -1,7 +1,0 @@
-<?php
-
-use Drupal\Core\Session\AccountInterface;
-
-function commerce_demo_jsonapi_install() {
-  // No longer needed as JSON API permission removed.
-}
