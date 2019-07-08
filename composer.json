@@ -9,7 +9,7 @@
   "require": {
     "drupal/commerce": "^2.0",
     "drupal/commerce_demo": "^1.0",
-    "drupal/jsonapi": "^2.0"
+    "drupal/core": "^8.7.0"
   }
 }
 
